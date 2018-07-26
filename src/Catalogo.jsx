@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import * as request from 'superagent';
 import './Catalogo.css';
 import Home from './Home.jsx';
@@ -63,7 +63,7 @@ class Catalogo extends React.Component {
 componentWillMount(){
 
 request
-.get(' https://tienda-alimentos.firebaseio.com/.json')
+.get(' https://tienda-alimentos-64297.firebaseio.com/.json')
 .end((err,res)=>{
 this.setState(res.body)
 
@@ -74,7 +74,7 @@ this.setState(res.body)
 handleChange(e){
 var criterio=(document.getElementById('searchInput').value)
 request
-.get(' https://tienda-alimentos.firebaseio.com/.json')
+.get(' https://tienda-alimentos-64297.firebaseio.com/.json')
 .end((err,res)=>{
 let usuarios=res.body.Usuarios
 let productos=[]
@@ -101,7 +101,7 @@ verDetallesProducto(e){
 
 var nombre=e.target.name
 request
-.get(' https://tienda-alimentos.firebaseio.com/.json')
+.get(' https://tienda-alimentos-64297.firebaseio.com/.json')
 .end((err,res)=>{
 for (let prod of res.body.Productos){
 if(prod.nombre===nombre){

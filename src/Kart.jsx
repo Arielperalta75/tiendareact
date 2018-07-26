@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import * as request from 'superagent';
 import './Kart.css';
 
@@ -77,7 +77,7 @@ import './Kart.css';
 
   componentDidMount(){
   request
-  .get(' https://tienda-alimentos.firebaseio.com/.json')
+  .get(' https://tienda-alimentos-64297.firebaseio.com/.json')
   .end((err,res)=>{
   this.setState(res.body)
 
@@ -103,7 +103,7 @@ import './Kart.css';
 
   }
   request
-  .put(' https://tienda-alimentos.firebaseio.com/.json',this.state)
+  .put(' https://tienda-alimentos-64297.firebaseio.com/.json',this.state)
   .end((err,res)=>{
   
   sessionStorage.setItem('kart',null)
